@@ -10,7 +10,7 @@ const {
 const users = [
   {
     id: '1',
-    avatar: 'https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png',
+    avatar: 'https://sib100.ru/wp-content/uploads/2018/10/Buriy-misha_4.jpg',
     email: 'ivan@yandex.ru',
     firstName: 'Ivan',
     secondName: 'Ivanov',
@@ -19,7 +19,7 @@ const users = [
   },
   {
     id: '2',
-    avatar: 'https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png',
+    avatar: 'https://sib100.ru/wp-content/uploads/2018/10/Buriy-misha_4.jpg',
     email: 'petrov@yandex.ru',
     firstName: 'Petr',
     secondName: 'Petrov',
@@ -28,7 +28,7 @@ const users = [
   },
   {
     id: '3',
-    avatar: 'https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png',
+    avatar: 'https://sib100.ru/wp-content/uploads/2018/10/Buriy-misha_4.jpg',
     email: 'foobar@yandex.ru',
     firstName: 'Foo',
     secondName: 'Bar',
@@ -58,6 +58,12 @@ const Query = new GraphQLObjectType({
       args: { email: { type: GraphQLString }, password: { type: GraphQLString } },
       resolve(parent, { email, password }) {
         return users.find((user) => user.email === email && user.password === password);
+      },
+    },
+    users: {
+      type: UserType,
+      resolve() {
+        return users[0];
       },
     },
   },

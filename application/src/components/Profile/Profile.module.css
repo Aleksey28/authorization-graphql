@@ -1,0 +1,38 @@
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: calc(100% - 10px * 2);
+  max-width: 410px;
+  padding: 53px 32px 37px 33px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+.avatar {
+  border-radius: 20px;
+  margin: 0 0 16px;
+}
+
+.text {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 28px;
+  color: #424242;
+  margin: 0 0 16px;
+}
+
